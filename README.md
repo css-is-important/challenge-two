@@ -1,5 +1,8 @@
 # CSS is !important - Challenge Two: Coming Soon
 CSS is !important - Challenge Two: Coming Soon
+
+## Challenge notes
+- The main sitemap is made from a single `ul`. Bonus points will be awarded if you don't use any classes here _at all_
 ## The Rules
 There's really only one rule to this: *You may not edit the HTML*
 
