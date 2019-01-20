@@ -1,0 +1,17 @@
+html {
+  font-size: 62.5%; // Resets font size to 10px
+}
+
+body {
+  background: #ecf0f1;
+  font-family: 'Raleway', sans-serif;
+  color: $body;
+}
+
+#accordion > div {
+  display: none;
+}
+
+strong {
+  font-weight: 700;
+}

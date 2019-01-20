@@ -1,0 +1,36 @@
+$laptop: "only screen and (max-width : 95em)";
+$desktop: "only screen and (min-width : 31em)";
+$tablet: "only screen and (max-width : 65em)";
+$tablet-portrait: "only screen and (max-width : 65em) and (orientation: portrait)";
+$phablet: "only screen and (max-width : 45em)";
+$phone: "only screen and (max-width : 31em)";
+$retina: "only screen and (-webkit-min-device-pixel-ratio: 2)";
+
+/**
+
+  Usage
+
+  Wrap around blocks:
+
+  @media #{$phone} {
+    .content {
+      style: value;
+      style: value;
+      style: value;
+    }
+  }
+
+  Use inside blocks:
+
+  .content {
+    style: value;
+    style: value;
+    style: value;
+
+    @media #{$phone} {
+      style: value;
+      style: value;
+    }
+  }
+
+**/
