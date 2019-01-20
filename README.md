@@ -20,7 +20,7 @@ Actually there is another rule... Everything you do must be done in CSS. No java
 - Push your branch
 - Profit
 ## Things to note
-- There are a couple of `id`s in the HTML. These are purely for javascript and should not be changed.
+- There may be some `id`s in the HTML. These are purely for javascript and should not be changed.
 - Colours are predefined and are available inside `stylesheets/dev/colours.scss`
 - Spacing values are not provided. You may choose a suitable value, as long as it is consistent across the page - don't worry about pixel-perfection.
 - Treat this as a real, content-driven website - don't make things too specific!
