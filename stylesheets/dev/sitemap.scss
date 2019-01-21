@@ -1,0 +1,171 @@
+ul {
+	@include clearfix;
+	&.sitemap {
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		position: relative;
+		@media #{$phone} {
+			flex-wrap: wrap;
+			@include rems(padding-top, 2);
+		}
+		&:before, &:after {
+			content: '';
+			display: block;
+			position: absolute;
+			background: #ccc;
+		}
+		&:after {
+			left: 0;
+			right: 0;
+			@include rems(top, 1.8);
+			height: 1px;
+		}
+		& > li {
+			@include rems(margin, 0, 1);
+			position: relative;
+			z-index: 10;
+			@media #{$phone} {
+				@include rems(margin, 0, 0, 2);
+				width: 100%;
+			}
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin: 0;
+			}
+			& > span {
+				display: block;
+				color: #fff;
+				@include rems(padding, 0.5, 2);
+				@include box;
+				border: 1px solid #fff;
+				background: $primary;
+				font-weight: 400;
+				i {
+					@include rems(margin-left, 1);
+				}
+				&.notes {
+					cursor: pointer;
+				}
+			}
+			& ul {
+				@include rems(margin, 0, 1);
+				@include rems(padding, 2, 0, 0);
+				display: block;
+				text-align: left;
+				@include clearfix;
+				position: relative;
+				@media #{$phone} {
+					width: 90%;
+					margin: 0 auto;
+					@include rems(padding, 1, 0, 0);
+					text-align: center;
+				}
+				&:before, &:after {
+					content: '';
+					display: block;
+					position: absolute;
+					background: #ccc;
+					@media #{$phone} {
+						display: none;
+					}
+				}
+				&:before {
+					width: 1px;
+					left: 0;
+					top: 0;
+					//@include rems(bottom, 1.8);
+					bottom: 0;
+				}
+				li {
+					display: block;
+					@include rems(padding, 0, 0, 2, 2);
+					position: relative;
+					overflow: hidden;
+					@media #{$phone} {
+						width: 100%;
+						padding: 0;
+						@include rems(margin, 0, 0, 1);
+					}
+					span {
+						background: #ededed;
+						color: #707070;
+						@include rems(padding, 0.5, 2);
+						display: inline-block;
+						position: relative;
+						z-index: 20;
+						&:after {
+							content: '';
+							display: block;
+							position: absolute;
+							background: #fff;
+							height: 1px;
+							left: 100%;
+							right: -1000px;
+							z-index: -1;
+							@include rems(top, 1.8);
+						}
+					}
+					&:before, &:after {
+						content: '';
+						display: block;
+						position: absolute;
+						background: #ccc;
+						@media #{$phone} {
+							display: none;
+						}
+					}
+					&:before {
+						width: 1px;
+						left: 0;
+						top: 0;
+						bottom: 0;
+					}
+					&:after {
+						height: 1px;
+						left: 0;
+						right: 0;
+						@include rems(top, 1.8);
+					}
+					&:last-child {
+						padding-bottom: 0;
+						& > span {
+							&:before {
+								content: '';
+								display: block;
+								position: absolute;
+								background: #fff;
+								width: 1px;
+								@include rems(top, 1.8);
+								bottom: 0;
+								@include rems(left, -2);
+							}
+						}
+						&:before {
+							@include rems(bottom, 1.8);
+						}
+						@media #{$phone} {
+							margin: 0;
+						}
+					}
+				}
+				li {
+					&:last-child {
+						ul {
+							&:after {
+								background: #fff;
+								width: 1px;
+								@include rems(top, -1.6);
+								bottom: 0;
+								@include rems(left, -3);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
