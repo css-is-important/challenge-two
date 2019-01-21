@@ -1,7 +1,12 @@
-# CSS is !important - Challenge Two: Coming Soon
-CSS is !important - Challenge Two: Coming Soon
+# CSS is !important - Challenge Two: CSS Sitemap
+Creating a sitemap using CSS, the aim is to create this:
+
+![CSS is !important](screenshot-high-res.png)
+
+See high-res screenshot - https://raw.githubusercontent.com/css-is-important/challenge-two/master/screenshot-high-res.png
 
 ## Challenge notes
+- An exercise in absolute positioning, CSS selectors & pseudo elements
 - The main sitemap is made from a single `ul`. Bonus points will be awarded if you don't use any classes here _at all_
 ## The Rules
 There's really only one rule to this: *You may not edit the HTML*
@@ -14,6 +19,7 @@ Actually there is another rule... Everything you do must be done in CSS. No java
 - Clone the repo to your computer
 - Run `npm install`
 - Run `grunt`
+  - If you get a `grunt-contrib-sass PATH` error, run `sudo gem install sass` and run `grunt` again
 - The page will run at `localhost:9000`
 ## Taking part
 - Create a `entries/your-name` branch from `master`
