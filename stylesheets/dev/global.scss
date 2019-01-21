@@ -6,6 +6,7 @@ body {
   background: #ecf0f1;
   font-family: 'Raleway', sans-serif;
   color: $body;
+  @include font-size(1.8, 2.4);
 }
 
 #accordion > div {
@@ -14,4 +15,11 @@ body {
 
 strong {
   font-weight: 700;
+}
+
+.container {
+  width: calc(100% - 200px);
+  width: calc(100% - 20rem);
+  max-width: 90%;
+  margin: 0 auto;
 }

@@ -1,7 +1,65 @@
+@mixin font-size($size:1.6, $line: $size * 1.5){
+    font-size:   ($size * 10) + px;
+    line-height: ($line * 10) + px;
+    font-size:   $size + rem;
+    line-height: $line + rem;
+}
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin rems($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $pxValues: #{$pxValues + $value*10}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  }
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $remValues: #{$remValues + $value}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  }
+
+  #{$property}: $pxValues;
+  #{$property}: $remValues;
+}
+
 @mixin opacity($opacity) {
   opacity: $opacity;
   $opacity-ie: $opacity * 100;
   filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin rowMachine($numPerRow, $margin) {
+  width: calc((100% - ((#{$numPerRow} - 1) * #{$margin}rem)) / #{$numPerRow});
+  &:nth-child(n) {
+    margin-bottom: #{$margin*10}px;
+    margin-right: #{$margin*10}px;
+    margin-bottom: #{$margin}rem;
+    margin-right: #{$margin}rem;
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+  }
+  &:nth-child(#{$numPerRow}n+1) {
+    clear: both;
+  }
+  &:nth-child(#{$numPerRow}n+1):nth-last-child(-n+#{$numPerRow}),
+  &:nth-child(#{$numPerRow}n+1):nth-last-child(-n+#{$numPerRow}) ~ * {
+    margin-bottom: 0;
+  }
 }
 
 @mixin clearfix {

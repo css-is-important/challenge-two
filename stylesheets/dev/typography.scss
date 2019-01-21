@@ -1,0 +1,10 @@
+h1 {
+  @include font-size(8, 8);
+  color: $primary;
+  text-transform: lowercase;
+  font-weight: 200;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  @include rems(margin-bottom, 10);
+}

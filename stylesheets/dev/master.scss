@@ -1,5 +1,5 @@
 /*!
-Vodafone CSS Benchmarking Test
+  CSS is !important
 */
 
 /* Essentials */
@@ -9,7 +9,10 @@ Vodafone CSS Benchmarking Test
 @import 'mixins';
 @import 'media';
 @import 'reset';
-
-/* Add new stylesheets here */
-
 @import 'global';
+@import 'typography';
+@import 'page';
+
+// Your styles here
+
+@import 'sitemap';
