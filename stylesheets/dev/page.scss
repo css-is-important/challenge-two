@@ -11,6 +11,11 @@
   justify-content: center;
   position: relative;
 
+  @media #{$phone} {
+    min-height: 10px;
+    @include rems(padding, 4, 0, 8);
+  }
+
   &:after {
     content: '';
     display: block;
@@ -39,6 +44,11 @@
   border-top: 5px solid $primary;
   @include rems(padding, 10);
   @include rems(margin-top, -10);
+
+  @media #{$phone} {
+    @include rems(padding, 2, 2, 4);
+    @include rems(margin-top, -4);
+  }
 }
 .diamond {
   @include rems(width, 10);
@@ -54,6 +64,13 @@
   position: absolute;
   top: 100%;
   left: 50%;
+
+  @media #{$phone} {
+    @include rems(width, 4);
+    @include rems(height, 4);
+    @include font-size(2, 2);
+    @include rems(margin-top, -0.5);
+  }
 
   i, svg {
     transform: rotate(-45deg);
