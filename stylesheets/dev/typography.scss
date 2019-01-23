@@ -7,4 +7,9 @@ h1 {
   position: relative;
   z-index: 5;
   @include rems(margin-bottom, 10);
+
+  @media #{$phone} {
+    @include font-size(4, 4);
+    @include rems(margin-bottom, 4);
+  }
 }
